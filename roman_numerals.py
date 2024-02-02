@@ -9,8 +9,9 @@ def to_roman(num):
     
     for k, v in rom_nums.items():
         if num >= v:
-            result = result + k
-            num -= v
-            print(num)
-
+            qty = int(num/v)
+            result += k*qty
+            # print(num, (k*qty))
+            num -= v*qty
+            
     return result
